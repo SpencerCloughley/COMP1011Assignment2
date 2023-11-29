@@ -1,4 +1,20 @@
 .root{
-    -fx-background-color: blue;
-    -fx-font-fill: black;
+    -fx-background-color: deepskyblue;
+    -fx-font-fill: darkslategrey;
+}
+.button{
+    -fx-border-radius: 20pt;
+    -fx-background-radius: 20pt;
+}
+.label{
+    -fx-underline: true;
+}
+#header {
+    -fx-font-size: 26px;
+}
+.table-view{
+    -fx-size: 20;
+}
+.text-area{
+    -fx-text-fill: darkslategrey;
 }

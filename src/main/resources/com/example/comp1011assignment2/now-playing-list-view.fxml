@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.comp1011assignment2.NowPlayingListViewController">
+<AnchorPane prefHeight="500.0" prefWidth="600.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.comp1011assignment2.NowPlayingListViewController">
    <children>
       <VBox alignment="TOP_CENTER" layoutX="271.0" layoutY="41.0" prefHeight="457.0" prefWidth="600.0" AnchorPane.bottomAnchor="-57.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -35,7 +35,10 @@
                   <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
                </VBox.margin>
             </TableView>
-            <Label text="Movie Description" />
+            <Label text="Movie Description">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
                   <ImageView fx:id="posterImageView" fitHeight="120.0" fitWidth="134.0" pickOnBounds="true" preserveRatio="true">
@@ -43,10 +46,10 @@
                         <Insets right="25.0" />
                      </HBox.margin>
                   </ImageView>
-                  <TextArea fx:id="descriptionTextArea" prefHeight="126.0" prefWidth="400.0" wrapText="true" />
+                  <TextArea fx:id="descriptionTextArea" prefHeight="126.0" prefWidth="400.0" styleClass="textBox" wrapText="true" />
                </children>
                <VBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
                </VBox.margin>
             </HBox>
             <Button fx:id="btnPopular" mnemonicParsing="false" onAction="#changeToPopularView" text="Popular Movies" />
