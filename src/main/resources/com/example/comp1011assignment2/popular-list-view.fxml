@@ -12,7 +12,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.comp1011assignment2.PopularListViewController">
    <children>
       <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="510.0" prefWidth="610.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -29,7 +28,7 @@
                   </Label>
                   <TableView fx:id="tableView" minHeight="200.0" minWidth="200.0" prefHeight="200.0" prefWidth="552.0">
                      <columns>
-                        <TableColumn fx:id="rankColumn" prefWidth="59.0" text="Rank" />
+                        <TableColumn fx:id="idColumn" prefWidth="59.0" text="Movie Id" />
                         <TableColumn fx:id="titleColumn" prefWidth="223.0" text="Title" />
                         <TableColumn fx:id="dateColumn" prefWidth="157.0" text="Release Date" />
                         <TableColumn fx:id="popularityColumn" prefWidth="110.0" text="Popularity" />

@@ -26,7 +26,7 @@ public class NowPlayingListViewController implements Initializable {
     private TableColumn<Movie, Double> popularityColumn;
 
     @FXML
-    private TableColumn<Movie, Integer> rankColumn;
+    private TableColumn<Movie, Integer> idColumn;
 
     @FXML
     private TableView<Movie> tableView;
@@ -43,6 +43,7 @@ public class NowPlayingListViewController implements Initializable {
             dateColumn.setCellValueFactory(new PropertyValueFactory<>("releaseDate"));
             popularityColumn.setCellValueFactory(new PropertyValueFactory<>("popularity"));
             titleColumn.setCellValueFactory(new PropertyValueFactory<>("title"));
+            idColumn.setCellValueFactory(new PropertyValueFactory<>("MovieId"));
 
             tableView.getItems().addAll(apiResponse.getResults());
         } catch (IOException e) {

@@ -19,6 +19,8 @@ public class Movie {
     private Date releaseDate;
     @SerializedName("poster_path")
     private String poster;
+    @SerializedName("id")
+    private int movieId;
 
     public String getTitle() {
         return title;
@@ -48,5 +50,9 @@ public class Movie {
 
     public double getPopularity() {
         return popularity;
+    }
+
+    public int getMovieId() {
+        return movieId;
     }
 }
