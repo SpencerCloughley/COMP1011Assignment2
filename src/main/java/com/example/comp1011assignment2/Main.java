@@ -18,16 +18,6 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
-        try{
-            NowPlaying response = APIUtility.callNowPlaying();
-            String hello = "hello";
-            System.out.println(hello);
-            System.out.println(response.getResults());
-        }catch (Exception e){
-
-            System.out.println(e);
-        }
-
-        //launch();
+        launch();
     }
 }
