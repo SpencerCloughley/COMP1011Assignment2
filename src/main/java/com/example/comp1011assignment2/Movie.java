@@ -43,7 +43,7 @@ public class Movie {
     public String getPoster() {
         //first half of the poster url
         //https://www.themoviedb.org/t/p/w600_and_h900_bestv2/
-        return poster;
+        return "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/" + poster;
     }
 
     public double getPopularity() {

@@ -15,7 +15,7 @@ import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 
-public class NowPlayingListViewController implements Initializable {
+public class PopularListViewController implements Initializable {
     @FXML
     private TableColumn<Movie, LocalDate> dateColumn;
 
@@ -36,10 +36,15 @@ public class NowPlayingListViewController implements Initializable {
     @FXML
     private ImageView posterImageView;
 
+    @FXML
+    void changeToNowPlayingView(ActionEvent event) throws IOException {
+        SceneChanger.changeScenes(event, "now-playing-list-view.fxml" );
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
-            APIResponse apiResponse = APIUtility.callNowPlaying();
+            APIResponse apiResponse = APIUtility.callPopular();
             dateColumn.setCellValueFactory(new PropertyValueFactory<>("releaseDate"));
             popularityColumn.setCellValueFactory(new PropertyValueFactory<>("popularity"));
             titleColumn.setCellValueFactory(new PropertyValueFactory<>("title"));
@@ -61,9 +66,5 @@ public class NowPlayingListViewController implements Initializable {
                 }
             }
         });
-    }
-    @FXML
-    void changeToPopularView(ActionEvent event) throws IOException {
-        SceneChanger.changeScenes(event, "popular-list-view.fxml" );
     }
 }
