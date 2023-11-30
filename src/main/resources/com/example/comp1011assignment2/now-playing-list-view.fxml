@@ -16,7 +16,7 @@
    <children>
       <VBox alignment="TOP_CENTER" layoutX="271.0" layoutY="41.0" prefHeight="457.0" prefWidth="600.0" AnchorPane.bottomAnchor="-57.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label alignment="CENTER" prefHeight="38.0" prefWidth="241.0" text="Now Playing" textAlignment="CENTER">
+            <Label id="header" alignment="CENTER" prefHeight="38.0" prefWidth="241.0" text="Now Playing" textAlignment="CENTER">
                <font>
                   <Font size="26.0" />
                </font>
@@ -35,11 +35,11 @@
                   <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
                </VBox.margin>
             </TableView>
-            <Label text="Movie Description">
+            <Label id="descrptionLabel" fx:id="descriptionLabel" text="Movie Description">
                <font>
                   <Font size="14.0" />
                </font></Label>
-            <HBox prefHeight="100.0" prefWidth="200.0">
+            <HBox id="descriptionHBox" fx:id="descriptionHBox" prefHeight="100.0" prefWidth="200.0">
                <children>
                   <ImageView fx:id="posterImageView" fitHeight="120.0" fitWidth="134.0" pickOnBounds="true" preserveRatio="true">
                      <HBox.margin>

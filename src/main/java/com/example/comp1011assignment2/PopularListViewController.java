@@ -3,12 +3,14 @@ package com.example.comp1011assignment2;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
 
 import java.io.IOException;
 import java.net.URL;
@@ -35,6 +37,11 @@ public class PopularListViewController implements Initializable {
     private TableColumn<Movie, String> titleColumn;
     @FXML
     private ImageView posterImageView;
+    @FXML
+    private HBox descriptionHBox;
+
+    @FXML
+    private Label descriptionLabel;
 
     @FXML
     void changeToNowPlayingView(ActionEvent event) throws IOException {
@@ -43,6 +50,9 @@ public class PopularListViewController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        descriptionLabel.setVisible(false);
+        descriptionHBox.setVisible(false);
+        
         try {
             APIResponse apiResponse = APIUtility.callPopular();
             dateColumn.setCellValueFactory(new PropertyValueFactory<>("releaseDate"));
@@ -59,6 +69,9 @@ public class PopularListViewController implements Initializable {
         tableView.getSelectionModel().selectedItemProperty().addListener((obs,oldValue, movieSelected)->{
             if(movieSelected!=null) {
                 descriptionTextArea.setText(movieSelected.getDescription());
+                descriptionLabel.setVisible(true);
+                descriptionHBox.setVisible(true);
+
                 try{
                     posterImageView.setImage(new Image(movieSelected.getPoster()));
                 }catch (IllegalArgumentException e){

@@ -37,11 +37,11 @@
                         <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
                      </VBox.margin>
                   </TableView>
-                  <Label text="Movie Description">
+                  <Label id="descriptionLabel" fx:id="descriptionLabel" text="Movie Description">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
-                  <HBox prefHeight="100.0" prefWidth="200.0">
+                  <HBox id="descriptionHbox" fx:id="descriptionHBox" prefHeight="100.0" prefWidth="200.0">
                      <children>
                         <ImageView fx:id="posterImageView" fitHeight="120.0" fitWidth="134.0" pickOnBounds="true" preserveRatio="true">
                            <HBox.margin>
